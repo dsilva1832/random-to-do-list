@@ -19,6 +19,7 @@
   </a>
   <button onclick="Logout()" class="btn btn-outline-danger my-sm-0 me-5" type="submit" >Logout</button>
 </nav>
+
 <div class="container mt-5">
     <h2>Welcome <span id="userId">User</span> </h2>
 </div>
@@ -29,7 +30,7 @@
     if (localStorage.getItem("username")){
         userId.innerHTML=localStorage.getItem("username")
     }else{
-        alert("Login again...")
+        alert("Login failed...")
         window.location="index.html"
     }
     function Logout(){
