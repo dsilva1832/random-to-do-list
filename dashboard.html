@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+   <!-- navbar-->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <i class="fa-solid fa-list-check ms-5 me-5"></i>
+    To-Do Generator
+  </a>
+  <button onclick="Logout()" class="btn btn-outline-danger my-sm-0 me-5" type="submit" >Logout</button>
+</nav>
+<div class="container mt-5">
+    <h2>Welcome <span id="userId">User</span> </h2>
+</div>
+    
+</body>
+
+<script>
+    if (localStorage.getItem("username")){
+        userId.innerHTML=localStorage.getItem("username")
+    }else{
+        alert("Login again...")
+        window.location="index.html"
+    }
+    function Logout(){
+        localStorage.clear()
+        window.location="index.html"
+    }
+</script>
+
+</html>
