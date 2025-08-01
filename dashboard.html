@@ -94,18 +94,18 @@
         // 1. create object for XHR class
         const api = new XMLHttpRequest();
         // 2. create request to https://jsonplaceholder.typicode.com/todos
-        api.open("GET", "https://jsonplaceholder.typicode.com/todos");
+        api.open("GET", "https://dummyjson.com/todos");
         // send request
         api.send();
         api.onreadystatechange=()=>{
             if (api.readyState==4){
                 if(api.status>=200 && api.status<=299){
                     const list=JSON.parse(api.responseText)
-                    const shuffle = list.sort(()=>0.5 - Math.random()).slice(0,5);
+                    const shuffle = list.todos.sort(()=>0.5 - Math.random()).slice(0,5);
                     resultList.innerHTML='';
-                    shuffle.forEach(todo=>{
+                    shuffle.forEach(task=>{
                         resultList.innerHTML += `
-                            <li>${todo.title}</li>
+                            <li>${task.todo}</li>
                         `;
                         
                     })
