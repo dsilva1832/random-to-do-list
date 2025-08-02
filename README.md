@@ -4,15 +4,15 @@
 ----
 ##Features:
 
-  Uses API call
-  Login page with validation
-  Stores username on localstorage
+  Uses API call,
+  Login page with validation,
+  Stores username on localstorage,
   Responsive design using bootstrap
 ----
 ##Technologies used:
 
-  HTML
-  CSS
-  Bootstrap
+  HTML,
+  CSS,
+  Bootstrap,
   Javascript
 ----
